@@ -318,6 +318,15 @@ define([
 		});
 
 		// Save As menu items
+		$(".action-savetodb").click(function() {
+			var content = fileMgr.currentFile.content;
+			var title = fileMgr.currentFile.title;
+			alert(title);
+			alert(content);
+			alert(currentHTML.withoutComments);			
+			//utils.saveAs(content, title + ".md");
+			//utils.saveAs(currentHTML.withoutComments, title + ".html");
+		});	
 		$(".action-download-md").click(function() {
 			var content = fileMgr.currentFile.content;
 			var title = fileMgr.currentFile.title;
